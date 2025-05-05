@@ -6,7 +6,6 @@ edition = "{{edition}}"
 license = "{{license}}"
 description = "{{description}}"
 default-run = "{{crate_name}}"
-edition = "{{edition}}"
 readme = "README.md"
 repository = "https://github.com/qompassai/{{crate_name}}"
 documentation = "https://docs.rs/{{crate_name}}"
@@ -34,7 +33,6 @@ debug = true
 codegen-units = 1
 incremental = false
 lto = "thin"
-
 opt-level = 3
 panic = "abort"
 strip = "debuginfo"
