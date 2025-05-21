@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-title: "rtemplate"
+title: "Qompass AI Rust Repo Template"
 message: "If you use this software, please cite it as below."
 authors:
   - family-names: "Porter"
@@ -16,6 +16,6 @@ keywords:
   - Healthcare
   - Post-Quantum Cryptography
   - Quantum
-  - opensource
-  - software
-abstract: "Qompass AI Rust template"
+  - nix
+  - rust
+abstract: "Qompass AI Rust Repo Template"
