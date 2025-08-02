@@ -1,6 +1,6 @@
 #!/bin/sh
-# /qompassai/rust/scripts/quickstart.sh
-# Qompass AI Rust Quick Start
+# /qompassai/rtemplate/scripts/quickstart.sh
+# Qompass AI Rust Template Quick Start
 # Copyright (C) 2025 Qompass AI, All rights reserved
 ####################################################
 set -eu
