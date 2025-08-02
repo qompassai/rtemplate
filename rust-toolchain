@@ -1,0 +1,10 @@
+# /qompassai/rust/rust-toolchain
+# Qompass AI Rust Toolchain
+# Copyright (C) 2025 Qompass AI, All rights reserved
+####################################################
+[toolchain]
+channel = "nightly"
+profile = "default"
+components = [ "rustfmt", "clippy", "rust-analyzer", "rust-src", "miri", "llvm-tools-preview" ]
+targets = [ "x86_64-unknown-linux-gnu", "aarch64-unknown-linux-gnu", "wasm32-unknown-unknown" ]
+

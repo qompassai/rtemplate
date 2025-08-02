@@ -1,21 +1,18 @@
-# ~/.GH/Qompass/Templates/rtemplate/flake.nix
-# -------------------------------------------
+# /qompassai/rtemplate/flake.nix
+# Qompass AI Rust Template FLake
 # Copyright (C) 2025 Qompass AI, All rights reserved
-
+####################################################
 {
-  description = "Qompass AI: Multi-toolchain Rust cross-compilation devshell";
-
+  description = "Qompass AI Rust Template Flake";
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
     fenix.url = "github:nix-community/fenix";
     flake-utils.url = "github:numtide/flake-utils";
   };
-
   outputs = { self, nixpkgs, fenix, flake-utils, ... }:
     flake-utils.lib.eachDefaultSystem (system:
       let
         pkgs = import nixpkgs { inherit system; };
-        # List of toolchains you want available
         toolchains = [
           fenix.packages.${system}.stable
           fenix.packages.${system}.beta
@@ -33,7 +30,6 @@
           fenix.packages.${system}.toolchainOf { version = "1.85.1"; }
           fenix.packages.${system}.toolchainOf { version = "1.86.0"; }
         ];
-
         cargoTools = with pkgs; [
           (rustPlatform.buildRustPackage rec {
             pname = "cross";
@@ -72,4 +68,3 @@
       }
     );
 }
-
