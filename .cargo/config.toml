@@ -1,5 +1,0 @@
-[alias]
-build = "zigbuild"
-run = "zigbuild run"
-check = "zigbuild check"
-test = "zigbuild test"
