@@ -1,0 +1,40 @@
+[package]
+name = "{{crate_name}}"
+version = "{{version}}"
+authors = ["{{authors}}"]
+edition = "{{edition}}"
+license = "{{license}}"
+description = "{{description}}"
+default-run = "{{crate_name}}"
+readme = "README.md"
+repository = "https://github.com/qompassai/{{crate_name}}"
+documentation = "https://docs.rs/{{crate_name}}"
+
+[workspace]
+members = 
+resolver = "3"
+
+[cache]
+compression-level = 6
+
+[dependencies]
+
+[dev-dependencies]
+
+# [[bin]]
+# name = "{{crate_name}}"
+# path = "src/main.rs"
+
+[profile.dev]
+opt-level = 3
+debug = true
+
+[profile.release]
+codegen-units = 1
+incremental = false
+lto = "thin"
+opt-level = 3
+panic = "abort"
+strip = "debuginfo"
+overflow-checks = true
+relocation-model = "pic"
